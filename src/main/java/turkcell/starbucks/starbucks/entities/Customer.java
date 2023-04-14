@@ -1,8 +1,8 @@
 package turkcell.starbucks.starbucks.entities;
 
-import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 

@@ -2,11 +2,10 @@ package turkcell.starbucks.starbucks.business.concretes;
 
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
-import org.springframework.http.codec.CodecConfigurer;
 import org.springframework.stereotype.Service;
-import turkcell.starbucks.starbucks.business.abstracts.EDevletService;
 import turkcell.starbucks.starbucks.entities.Customer;
 import turkcell.starbucks.starbucks.repository.CustomerRepository;
+import turkcell.starbucks.starbucks.business.abstracts.EDevletService;
 import turkcell.starbucks.starbucks.business.abstracts.CustomerService;
 import turkcell.starbucks.starbucks.business.dto.responses.gets.GetCustomerResponse;
 import turkcell.starbucks.starbucks.business.dto.requests.creates.CreateCustomerRequest;
@@ -75,4 +74,6 @@ public class CustomerManager implements CustomerService {
 
     @Override
     public void delete(int id) { repository.deleteById(id); }
+
+    // Business Rules
 }

@@ -1,8 +1,7 @@
 package turkcell.starbucks.starbucks.repository;
 
-import jakarta.persistence.criteria.CriteriaBuilder;
-import org.springframework.data.jpa.repository.JpaRepository;
 import turkcell.starbucks.starbucks.entities.EDevlet;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;
 
