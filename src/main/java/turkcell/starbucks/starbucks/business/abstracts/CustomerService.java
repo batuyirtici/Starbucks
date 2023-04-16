@@ -1,9 +1,9 @@
 package turkcell.starbucks.starbucks.business.abstracts;
 
-import turkcell.starbucks.starbucks.business.dto.responses.gets.GetCustomerResponse;
+import turkcell.starbucks.starbucks.business.dto.responses.gets.customer.GetCustomerResponse;
 import turkcell.starbucks.starbucks.business.dto.requests.creates.CreateCustomerRequest;
 import turkcell.starbucks.starbucks.business.dto.requests.updates.UpdateCustomerRequest;
-import turkcell.starbucks.starbucks.business.dto.responses.gets.GetAllCustomersResponse;
+import turkcell.starbucks.starbucks.business.dto.responses.gets.customer.GetAllCustomersResponse;
 import turkcell.starbucks.starbucks.business.dto.responses.creates.CreateCustomerResponse;
 import turkcell.starbucks.starbucks.business.dto.responses.updates.UpdateCustomerResponse;
 

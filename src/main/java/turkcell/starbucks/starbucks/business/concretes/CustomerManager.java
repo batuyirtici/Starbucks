@@ -5,12 +5,12 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import turkcell.starbucks.starbucks.entities.Customer;
 import turkcell.starbucks.starbucks.repository.CustomerRepository;
-import turkcell.starbucks.starbucks.business.abstracts.EDevletService;
+import turkcell.starbucks.starbucks.business.abstracts.FakeEDevletService;
 import turkcell.starbucks.starbucks.business.abstracts.CustomerService;
-import turkcell.starbucks.starbucks.business.dto.responses.gets.GetCustomerResponse;
+import turkcell.starbucks.starbucks.business.dto.responses.gets.customer.GetCustomerResponse;
 import turkcell.starbucks.starbucks.business.dto.requests.creates.CreateCustomerRequest;
 import turkcell.starbucks.starbucks.business.dto.requests.updates.UpdateCustomerRequest;
-import turkcell.starbucks.starbucks.business.dto.responses.gets.GetAllCustomersResponse;
+import turkcell.starbucks.starbucks.business.dto.responses.gets.customer.GetAllCustomersResponse;
 import turkcell.starbucks.starbucks.business.dto.responses.creates.CreateCustomerResponse;
 import turkcell.starbucks.starbucks.business.dto.responses.updates.UpdateCustomerResponse;
 
@@ -20,7 +20,7 @@ import java.util.List;
 @AllArgsConstructor
 public class CustomerManager implements CustomerService {
     private final ModelMapper mapper;
-    private final EDevletService eDevletService;
+    private final FakeEDevletService fakeEDevletService;
     private final CustomerRepository repository;
 
     @Override
@@ -46,7 +46,7 @@ public class CustomerManager implements CustomerService {
 
     @Override
     public CreateCustomerResponse add(CreateCustomerRequest request) {
-        eDevletService.customerVerification(request);
+        fakeEDevletService.customerVerification(request);
 
         Customer customer = mapper.map(request, Customer.class);
 
@@ -60,7 +60,7 @@ public class CustomerManager implements CustomerService {
 
     @Override
     public UpdateCustomerResponse update(int id, UpdateCustomerRequest request) {
-        eDevletService.customerVerification(request);
+        fakeEDevletService.customerVerification(request);
 
         Customer customer = mapper.map(request, Customer.class);
 

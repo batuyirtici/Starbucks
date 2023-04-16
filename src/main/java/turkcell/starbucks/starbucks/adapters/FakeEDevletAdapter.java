@@ -5,12 +5,12 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import turkcell.starbucks.starbucks.entities.Customer;
 import turkcell.starbucks.starbucks.repository.EDevletRepository;
-import turkcell.starbucks.starbucks.business.abstracts.EDevletService;
+import turkcell.starbucks.starbucks.business.abstracts.FakeEDevletService;
 import turkcell.starbucks.starbucks.business.dto.requests.CustomerRequest;
 
 @Service
 @AllArgsConstructor
-public class EDevletAdapter implements EDevletService {
+public class FakeEDevletAdapter implements FakeEDevletService {
     private final ModelMapper mapper;
     private final EDevletRepository repository;
 

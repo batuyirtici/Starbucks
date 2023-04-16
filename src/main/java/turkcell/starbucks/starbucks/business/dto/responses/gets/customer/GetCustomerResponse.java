@@ -1,4 +1,4 @@
-package turkcell.starbucks.starbucks.business.dto.responses.gets;
+package turkcell.starbucks.starbucks.business.dto.responses.gets.customer;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class GetAllCustomersResponse {
+public class GetCustomerResponse {
     private int id;
     private String name;
     private String lastName;
